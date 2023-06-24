@@ -10,5 +10,9 @@ prod:
 prod_static:
 	docker compose -f ./docker/docker-compose.yml -f ./docker/docker-compose.prod_static.yml -p my_project up -d --build
 
+build:
+	# "ENOTIMPLEMENTEDYET: This should be configured according to your needs."
+	# docker build <???> . 
+
 stop:
-	docker compose down -v
+	docker compose -f ./docker/docker-compose.yml -p my_project down -v

@@ -36,8 +36,8 @@ WORKDIR /app
 
 COPY --from=base /app/package*.json .
 COPY --from=base /app/node_modules/ ./node_modules/
-COPY --from=builder /app/.next/ ./.next/
 COPY --from=base /app/public/ ./public/
+COPY --from=builder /app/.next/ ./.next/
 
 ENTRYPOINT ["npm", "run", "start"]
 

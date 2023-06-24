@@ -5,3 +5,8 @@ services:
     image: myproject/next_app
     build:
       context: ../
+      # target:     // this is specifid in the other compose files
+    # ports:
+      # - 3000:3000 // this is specified in the other compose files
+      #             // the mapping differs between files slightly 
+    
