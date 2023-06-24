@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  next_app:
+    image: myproject/next_app
+    build:
+      context: ../

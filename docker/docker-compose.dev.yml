@@ -1,0 +1,9 @@
+services:
+  next_app:
+    container_name: "next_app-dev"
+    build:
+      target: dev
+    volumes: 
+      - ../:/app/
+    ports: 
+      - 3000:3000
