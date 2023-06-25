@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
         with:
           context: .
-          stage: prod_static
+          target: prod_static
           push: true
           tags: latest
           labels: ${{ steps.meta.outputs.labels }}
@@ -54,7 +54,7 @@ jobs:
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
         with:
           context: .
-          stage: start
+          target: start
           push: true
           tags: start
           labels: ${{ steps.meta.outputs.labels }}
