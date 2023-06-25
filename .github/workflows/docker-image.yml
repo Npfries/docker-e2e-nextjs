@@ -41,16 +41,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      - name: Build and push prod
-        uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
-        with:
-          context: .
-          target: prod_static
-          push: true
-          tags: latest
-          labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Build and push start
+      - name: Build and push image
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
         with:
           context: .
