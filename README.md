@@ -1,4 +1,5 @@
-This repo is intended to demonstrate the end to end lifecycle of a Next.js application with Docker.
+This repo is intended to demonstrate the end to end lifecycle of a Next.js application with Docker. It was created with `npx create-next-app@latest` as documented on the [Next.js project website.](https://nextjs.org)
+
 
 There are several Docker commands in the Makefile for convenient use of the project. 
 ```

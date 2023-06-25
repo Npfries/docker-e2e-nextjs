@@ -2,7 +2,7 @@ FROM node:18 AS base
 
 WORKDIR /app
 
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm ci
 
