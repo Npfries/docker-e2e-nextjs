@@ -34,7 +34,7 @@ FROM node:18-alpine AS prod
 
 WORKDIR /app
 
-COPY --from=base /app/package*.json .
+COPY --from=base /app/package*.json ./
 COPY --from=base /app/node_modules/ ./node_modules/
 COPY --from=base /app/public/ ./public/
 COPY --from=builder /app/.next/ ./.next/

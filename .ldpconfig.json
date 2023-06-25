@@ -1,0 +1,12 @@
+{
+  "docker": {
+    "start": [
+      "./docker/docker-compose.yml",
+      "./docker/docker-compose.start.yml"
+    ],
+    "dev": [
+      "./docker/docker-compose.yml",
+      "./docker/docker-compose.dev.yml"
+    ]
+  }
+}
