@@ -47,7 +47,7 @@ jobs:
           context: .
           target: prod_static
           push: true
-          tags: latest
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push start
@@ -56,5 +56,5 @@ jobs:
           context: .
           target: start
           push: true
-          tags: start
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
