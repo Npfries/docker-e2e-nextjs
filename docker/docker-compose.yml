@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   next_app:
-    image: myproject/next_app
+    image: ghcr.io/npfries/docker-e2e-nextjs:main
     build:
       context: ../
       # target:     // this is specifid in the other compose files

@@ -1,4 +1,7 @@
 start:
+	docker compose -f ./docker/docker-compose.yml -f ./docker/docker-compose.start.yml -p my_project up -d --no-build --pull always
+
+start_local:
 	docker compose -f ./docker/docker-compose.yml -f ./docker/docker-compose.start.yml -p my_project up -d --build
 
 dev:
