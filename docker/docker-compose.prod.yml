@@ -3,5 +3,3 @@ services:
     container_name: "next_app-prod"
     build:
       target: prod
-    ports: 
-      - 3000:3000

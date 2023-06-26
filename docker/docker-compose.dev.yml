@@ -5,5 +5,3 @@ services:
       target: dev
     volumes: 
       - ../:/app/
-    ports: 
-      - 3000:3000

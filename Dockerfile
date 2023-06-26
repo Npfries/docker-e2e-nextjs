@@ -24,11 +24,11 @@ CMD []
 
 FROM builder AS start
 
-ENTRYPOINT [ "npm", "run", "start" ]
+ENTRYPOINT [ "npm", "run", "start:docker" ]
 
 FROM base AS dev
 
-ENTRYPOINT ["npm", "run", "dev"]
+ENTRYPOINT ["npm", "run", "dev:docker"]
 
 FROM node:18-alpine AS prod
 
@@ -39,7 +39,7 @@ COPY --from=base /app/node_modules/ ./node_modules/
 COPY --from=base /app/public/ ./public/
 COPY --from=builder /app/.next/ ./.next/
 
-ENTRYPOINT ["npm", "run", "start"]
+ENTRYPOINT ["npm", "run", "start:docker"]
 
 FROM httpd:2.4 AS prod_static
 
